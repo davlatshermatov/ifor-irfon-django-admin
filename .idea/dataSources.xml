@@ -8,5 +8,12 @@
       <jdbc-url>jdbc:postgresql://localhost:5432/ebozor</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="ebozor" uuid="f3e346b5-dfc8-41d8-b1cf-f4339da3ede5">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\PROGRAMMING\Python\Python-Projects\eshop\ebozor</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

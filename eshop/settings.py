@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 import os
+# import django_heroku
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -77,12 +78,12 @@ WSGI_APPLICATION = 'eshop.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': "ebozor"
-        # 'USER': 'postgres',
-        # 'PASSWORD': '1',
-        # 'HOST': 'localhost',
-        # 'PORT': '5432',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': "da3mqtmoe8eka5",
+        'USER': 'zatqgawxnscuor',
+        'PASSWORD': 'b8c7014260e3ab3001b140b02f6e045d02fd275190a62928b40a32a8ac644754',
+        'HOST': 'ec2-3-227-15-75.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
@@ -118,8 +119,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# django_heroku.settings(locals())
+
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
